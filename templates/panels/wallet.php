@@ -1,3 +1,6 @@
+<?php
+    require_once('includes/autoloader.inc.php');
+?>
 <div id="wallet" class="panel panel-primary panel-wallet">
    <h1>Wallet</h1>
    <div class="panel-heading">
@@ -8,6 +11,6 @@
    </div>
    <div class="panel-body">
       <div class="panel-body-addresses"><img src="images/ajax-loader.gif" alt="loading" style="position: relative; float:none; opacity: 1; bottom: 0; left: 0;" /></div>
-      <div class="panel-body-thanks">Conversions powered by <a href="https://firstrally.com/" target="_external">https://firstrally.com/</a></div>
+      <div class="panel-body-thanks"><?php $w = new Wallets(); echo $w->getExchanger()->getDisclaimer();?></div>
    </div>
 </div>
